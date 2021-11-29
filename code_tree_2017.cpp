@@ -33,7 +33,8 @@ void createTree(BTree* node, char c[], int pos, int length) {
 
 int main() {
     BTree* a = (BTree*)malloc(sizeof(BTree));
-    createTree(a, "*+*abc-@@@@@@@d@@@@@@@@@@@@@@@@", 0, 31);
+    // createTree(a, "*+*abc-@@@@@@@d@@@@@@@@@@@@@@@@", 0, 31);//用@表示空节点
+    createTree(a, "+*-ab@-@@@@@@cd@@@@@@@@@@@@@@@@", 0, 31);//用@表示空节点
     midQuation(a);
     return 0;
 }
