@@ -9,6 +9,7 @@ void printArr(int a[], int n) {
 }
 
 int Partition(int A[], int low, int high) {
+	//快速排序
 	int pivot = A[low]; //选取第一个作为枢轴
 	while (low < high) {
 		while (low < high && A[high] >= pivot)
@@ -24,7 +25,7 @@ int Partition(int A[], int low, int high) {
 void QuickDivideSort(int A[], int low, int high, int n) {
 	if (low < high) {
 		int pivot = Partition(A, low, high);
-		if (pivot < n / 2)
+		if (pivot < n / 2)//划分出n/2的位置
 			QuickDivideSort(A, pivot + 1, high, n);
 		else
 			QuickDivideSort(A, low, pivot - 1, n);
