@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "MIMode": "gdb",
+      "args": [],
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "internalConsoleOptions": "neverOpen",
+      "miDebuggerPath": "C:\\Program Files\\mingw64\\mingw64\\bin\\gdb.exe",
+      "name": "gcc single file debug",
+      "preLaunchTask": "gcc single file build",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "request": "launch",
+      "setupCommands": [
+        {
+          "ignoreFailures": true,
+          "text": "-enable-pretty-printing"
+        }
+      ],
+      "stopAtEntry": false,
+      "type": "cppdbg"
+    }
+  ],
+  "version": "0.2.0"
+}
