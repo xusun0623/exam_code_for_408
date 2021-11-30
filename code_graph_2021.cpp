@@ -10,10 +10,10 @@ int IsExistEL(MGraph G) {
     int oddCount = 0;
     for (int i = 0;i < G.numVertices;i++) {
         int tmpOdd = 0;
-        for (int j = 0;j < G.numVertices;j++) {
+        for (int j = 0;j < G.numVertices;j++) {//遍历每一行，将个数统计出来
             tmpOdd += G.Edge[i][j];
         }
-        if (tmpOdd % 2 == 1) {
+        if (tmpOdd % 2 == 1) {//如果个数是奇数，就将oddCount+1
             oddCount++;
             if (oddCount > 2) {
                 return 0;
