@@ -28,7 +28,8 @@ int getLastK(NODE* p, int k) {
 
 int main() {
     NODE p;
-    create(&p, (int[]) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 0, 10);
+    int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    create(&p, a, 0, 10);
     int ret = getLastK(&p, 7);
     return 0;
 }
