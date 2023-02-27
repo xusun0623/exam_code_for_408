@@ -1,41 +1,29 @@
 {
-  "options": {
-    "env": {
-      "Path": "C:\\Program Files\\mingw64\\mingw64\\bin;${env:Path}"
-    },
-    "shell": {
-      "args": [
-        "/C"
-      ],
-      "executable": "C:\\Windows\\System32\\cmd.exe"
-    }
-  },
-  "tasks": [
-    {
-      "args": [
-        "-std=c18",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
-      ],
-      "command": "C:\\Program Files\\mingw64\\mingw64\\bin\\gcc.exe",
-      "group": {
-        "isDefault": true,
-        "kind": "build"
-      },
-      "label": "gcc single file build",
-      "presentation": {
-        "clear": true,
-        "echo": false,
-        "focus": false,
-        "panel": "shared",
-        "reveal": "silent",
-        "showReuseMessage": false
-      },
-      "problemMatcher": "$gcc",
-      "type": "process"
-    }
-  ],
-  "version": "2.0.0"
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang++ 生成活动文件",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/.out/${fileBasenameNoExtension}.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
 }
